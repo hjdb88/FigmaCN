@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "FigmaCN",
+  "short_name": "FigmaCN",
+  "description": "Figma 汉化",
+  "version": "1.0",
+  "homepage_url": "https://figma.com",
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.figma.com/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  }
+}
